@@ -3,4 +3,4 @@
 
 **Installation Steps:**
 * Step 1: Downloads the files on home directory
-* Step 2: Open "cpu.scpt" file and execute it
+* Step 2: Go to MacAnalysis directory, and then open "workflow.scpt" file and execute it
