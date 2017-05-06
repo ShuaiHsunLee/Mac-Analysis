@@ -12,6 +12,7 @@ with open('cpu_info.txt', 'r') as in_file:
 	# modify generator and simultaneously save in lst
 	lst = []
 	lst.append(next(stripped)) # save first PID line into lst
+	num = count(lst[0]) # count how many features
 	label = True # used to identify if line is gonna to save
 	for i in stripped:
 		if not i:
@@ -22,6 +23,12 @@ with open('cpu_info.txt', 'r') as in_file:
 			label = True
 			continue # skip PID line
 		if label == True:
+			# modify 'command' feature format
+			# i[1:3] means i[1] to i[2]
+			if len(i) == num + 1:
+				i[1:3] = [''.join(i[1:3])]
+			elif len(i) == num + 2:
+				i[1:4] = [''.join(i[1:4])]
 			lst.append(i)
 
 	with open('cpu_info.csv', 'w') as out_file:
