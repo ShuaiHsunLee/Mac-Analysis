@@ -4,7 +4,7 @@ import csv
 def count(iter):
     return sum(1 for _ in iter)
 
-with open('cpu_info.txt', 'r') as in_file:
+with open('data.txt', 'r') as in_file:
 	stripped = (line.strip().split() for line in in_file)
 	for i in range(10): # remove the first 10 lines in generator stripped
 		next(stripped)
@@ -31,6 +31,6 @@ with open('cpu_info.txt', 'r') as in_file:
 				i[1:4] = [''.join(i[1:4])]
 			lst.append(i)
 
-	with open('cpu_info.csv', 'w') as out_file:
+	with open('data.csv', 'w') as out_file:
 		writer = csv.writer(out_file)
 		writer.writerows(lst)
