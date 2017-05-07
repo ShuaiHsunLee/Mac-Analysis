@@ -1,6 +1,6 @@
 #  Analysis of Your Macintosh
-<p>This is for mac computer analysis by machine learning skill</p>
 
-**Installation Steps:**
-* Step 1: Downloads the files on home directory
-* Step 2: Go to MacAnalysis directory, and then open "workflow.scpt" file and execute it
+**Running Steps:**
+* Step 1: Downloads the files on any directory
+* Step 2: Open Terminal.app and go to the directory where files are
+* Step 3: Execute workflow.py by type "python workflow.py"
